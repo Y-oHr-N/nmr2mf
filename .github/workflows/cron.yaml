@@ -1,0 +1,32 @@
+name: Push to Money Forward
+
+on:
+  schedule:
+  - cron: '0 0 * * *'
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: y-ohr-n/nmr2mf
+
+jobs:
+  record-stake:
+    runs-on: ubuntu-latest
+    container: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+        poetry install
+    - name: Record the current total stake amount
+      env:
+        MONEYFORWARD_EMAIL: ${{ secrets.MONEYFORWARD_EMAIL }}
+        MONEYFORWARD_PASSWORD: ${{ secrets.MONEYFORWARD_PASSWORD }}
+        MONEYFORWARD_WALLET_ID: ${{ secrets.MONEYFORWARD_WALLET_ID }}
+        NUMERAI_PUBLIC_ID: ${{ secrets.NUMERAI_PUBLIC_ID }}
+        NUMERAI_SECRET_KEY: ${{ secrets.NUMERAI_SECRET_KEY}}
+      run: |
+        poetry run nmr2mf

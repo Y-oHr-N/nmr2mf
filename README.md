@@ -1,7 +1,7 @@
-# python-application-template
+# nmr2mf
 
-[![Python application](https://github.com/Y-oHr-N/python-application-template/actions/workflows/pythonapplication.yaml/badge.svg)](https://github.com/Y-oHr-N/python-application-template/actions/workflows/pythonapplication.yaml)
-[![codecov](https://codecov.io/gh/Y-oHr-N/python-application-template/branch/master/graph/badge.svg)](https://codecov.io/gh/Y-oHr-N/python-application-template)
+[![Python application](https://github.com/Y-oHr-N/nmr2mf/actions/workflows/pythonapplication.yaml/badge.svg)](https://github.com/Y-oHr-N/nmr2mf/actions/workflows/pythonapplication.yaml)
+[![codecov](https://codecov.io/gh/Y-oHr-N/nmr2mf/branch/master/graph/badge.svg)](https://codecov.io/gh/Y-oHr-N/nmr2mf)
 
 A template for Python applications.
 

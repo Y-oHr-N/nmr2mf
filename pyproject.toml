@@ -24,8 +24,13 @@ version = "0.1.0"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+ccxt = "^1.63.26"
+chromedriver-binary-auto = "^0.1.1"
+numerapi = "^2.9.4"
+selenium = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
+black = "^21.12b0"
 pre-commit = "^2.12.1"
 pytest = "^6.2.4"
 pytest-black = "^0.3.12"
