@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/ambv/black
+    rev: 20.8b1
+    hooks:
+      - id: black
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: '3.9.0'  # pick a git hash / tag to point to
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+      - id: isort
+        name: isort (python)
+      - id: isort
+        name: isort (cython)
+        types: [cython]
+      - id: isort
+        name: isort (pyi)
+        types: [pyi]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v0.812'  # Use the sha / tag you want to point at
+    hooks:
+      - id: mypy
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: 6.0.0  # pick a git hash / tag to point to
+    hooks:
+      - id: pydocstyle
+        exclude: test_.*\.py
