@@ -5,14 +5,10 @@ on:
   - cron: '0 0 * * *'
   workflow_dispatch:
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: y-ohr-n/nmr2mf
-
 jobs:
   record-stake:
     runs-on: ubuntu-latest
-    container: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+    container: ghcr.io/y-ohr-n/nmr2mf
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
