@@ -8,7 +8,7 @@ on:
 jobs:
   record-stake:
     runs-on: ubuntu-latest
-    container: ghcr.io/y-ohr-n/nmr2mf
+    container: ghcr.io/y-ohr-n/nmr2mf:main
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
