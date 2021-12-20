@@ -3,22 +3,19 @@
 [![Python application](https://github.com/Y-oHr-N/nmr2mf/actions/workflows/pythonapplication.yaml/badge.svg)](https://github.com/Y-oHr-N/nmr2mf/actions/workflows/pythonapplication.yaml)
 [![codecov](https://codecov.io/gh/Y-oHr-N/nmr2mf/branch/master/graph/badge.svg)](https://codecov.io/gh/Y-oHr-N/nmr2mf)
 
-A template for Python applications.
+nmr2mf will automatically record your NMR on Numerai in Money Forward at every day.
 
-## Installation
+## Settings
 
-```
-poetry install
-```
+1. Fork this repository
+2. [Create a new api key to allow viewing of user information in Numerai](https://numer.ai/account)
+3. [Create a new wallet to record your NMR in Money Forward](https://moneyforward.com/accounts/new/wallet)
+4. Add the following action secrets in GitHub (Settings > Secrets > New repository secret)
 
-## Usage
+- MONEYFORWARD_EMAIL
+- MONEYFORWARD_PASSWORD
+- MONEYFORWARD_WALLET_ID
+- NUMERAI_PUBLIC_ID
+- NUMERAI_SECRET_KEY
 
-```
-poetry run python awesome_app
-```
-
-## Testing
-
-```
-poetry run pytest
-```
+![WALLET_ID](data/wallet_id.png)
